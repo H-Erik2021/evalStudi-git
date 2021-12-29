@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- css-js bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- css dev-->
+        <link rel="stylesheet" href="style.css">
+        <!--fonts-->
+        <title>Faites un Don</title>
+        <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+        <script type="application/ld+json">
+            {
+                "@context" : "http://schema.org",
+                "@type" : "Event",
+                "name" : "Association Green's Planet",
+                "image" : "http://www.googleusercontent.com/earth.jpg",
+                "description" : "Un don pour soigner la planète",
+                "url" : "mailto:contact@greens-planet.com"
+            }
+        </script>
+    </head>
+    <body class="mix-white-70">
+        <header class="darken-20">
+            <nav class="navbar navbar-expand-lg navbar-fixed-top ">
+                <div class="container-fluid">
+                    <div class="navMenu row row-cols-auto g-lg-2">
+                        <div class="img1 ">
+                            <a href="index.html"><img src="photo/earth.jpg" alt="notre planète" class="imgLogo img-fluid img-thumbnail"></a>
+                        </div>
+                        <div class=" col-lg-3 col-md-4 col-sm-4 p-1 ">
+                            <div class="col-md-10 col-sm-8 m-auto">
+                                <div class="navbar-brand  textLogo text-white m-auto" >Green's Planet</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-3 p-1 ">
+                            <div class="col-md-4 col-sm-3 m-auto">
+                                <button class="navbar-toggler navbutton m-auto mix-white-100"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNavAltMarkup"
+                                        aria-controls="navbarNavAltMarkup"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 collapse navbar-collapse " id="navbarNavAltMarkup">
+                            <div class="navbar-nav linkNav d-flex justify-content-end">
+                                <a class="linkTextHeader nav-link" href="actions.html">Actions à venir</a>
+                                <a class="linkTextHeader nav-link" href="faiteUnDon.html">Faites un Don</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="mainP3 container-fluid ">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7 ">
+                    <h1>Un don pour soigner la planète</h1>
+                </div>
+            </div>
+            <!--formulaire de don -->
+            <div class="container-fluid">
+                    <form class="row form-group" method="post" action="#">
+                        <div class="divForm row  justify-content-evenly mix-white-80">
+                            <!-- module Don-->
+                            <div class="box col-xs-12 mix-white-100">
+                                <div class="border-bottom border-dark darken-20">
+                                    <h2 class="titleBox text-center">Votre don</h2>
+                                </div>
+                                <div class="boxDon row ">
+                                    <div class="col ">
+                                        <div class="boxValeurDon row row-col-11 g-0">
+                                            <div class="col d-flex justify-content-around">
+                                                <button type="button" class="btnDon btn btn-warning">10 €</button>
+                                                <button type="button" class="btnDon btn btn-warning">20 €</button>
+                                                <button type="button" class="btnDon btn btn-warning">30 €</button>
+                                                <button type="button" class="btnDon btn btn-warning">40 €</button>
+                                            </div>
+                                        </div>
+                                        <div class="boxValeurDon row ">
+                                            <div class="col-9  p-1 justify-content-center">
+                                                <label for="payFree" class="w-100">
+                                                    <input id="payFree"  type="text" size="14" tabindex="100" placeholder="Montant libre">
+                                                    <span>€</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="boxDonText row row-col-11  justify-content-center">
+                                            <div class="boxDonText col-9  ">
+                                                <p>Votre don bénéficie d'une réduction fiscale</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--module d'inscription-->
+                            <div class="box mix-white-100 ">
+                                <div class="border-bottom border-dark darken-20">
+                                    <h2 class="titleBox text-center">Vos Coordonnées</h2>
+                                </div>
+                                <div class="formBox row g-0">
+                                    <div class="col-12">
+                                        <fieldset id="fieldset-form">
+                                            <p id="mail">
+                                                <label for="Email" class="champsForm">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                                    </svg>
+                                                    <input class="champsForm" id="Email" type="text"  name="Email"  placeholder="Email *">
+                                                </label>
+                                            </p>
+                                            <p id="civil">
+                                                <label for="civility" class="champsForm">
+                                                    <select id="civility" class="champsForm">
+                                                    <option value="">Civilité *</option>
+                                                    <option value="1">M</option>
+                                                    <option value="2">Mme</option>
+                                                    </select>
+                                                </label>
+                                            </p>
+                                            <p id="lastNames" >
+                                                <label for="lastName" class="champsForm">
+                                                    <input class="champsForm" id="lastName" type="text" name="lastname" placeholder="votre Nom *">
+                                                </label>
+                                            </p>
+                                            <p id="firstNames">
+                                                <label for="firstName" class="champsForm">
+                                                    <input class="champsForm" id="firstName" type="text" name="firstname" placeholder="votre Prénom *">
+                                                </label>
+                                            </p>
+                                            <p id="addresses">
+                                                <label for="address" class="champsForm">
+                                                    <input class="champsForm" id="address" type="text" name="address" placeholder="votre adresse *">
+                                                </label>
+                                            </p>
+                                            <p id="citys">
+                                                <label for="city" class="champsForm">
+                                                    <input class="champsForm" id="city" type="text" name="city" placeholder="votre ville *">
+                                                </label>
+                                            </p>
+                                            <p id="phone">
+                                                <label for="telephone" class="champsForm">
+                                                    <input class="champsForm" id="telephone" type="text" name="tel" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="tel exemple: 12-34-56-78-90 *">
+                                                </label>
+                                            </p>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="champsBoxForm row row-col-11">
+                                    <div class="col-9 p-0 text-center">
+                                        <p id="textInfo">* Champs obligatoires pour bénéficier de votre réduction d'impôt et recevoir votre reçu fiscal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- module de paiement-->
+                            <div class="box mix-white-100">
+                                <div class="border-bottom border-dark darken-20">
+                                    <h2 class="titleBox text-center">Votre règlement</h2>
+                                </div>
+                                <div class="boxPaiement row ">
+                                        <div class="cbs">
+                                            <img class="imgPaiement img-fluid" src="photo/70593_mastercard_curved_icon.png"
+                                                 alt="carte de paiement"/><br>
+                                            <label class="checkboxPay">
+                                                <input name="paytype" type="radio" value="mastercard"> Mastercard
+                                            </label>
+                                        </div>
+                                        <div class="paypal">
+                                            <img class="imgPaiement img-fluid" src="photo/70607_paypal_curved_icon.png"
+                                                 alt="carte de paiement"/><br>
+                                            <label class="checkboxPay">
+                                                <input name="paytype" type="radio" value="paypal"> Paypal
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="boxPaiement row ">
+                                    <div class="cheq">
+                                        <img class="imgPaiement img-fluid" src="photo/cheque.png"
+                                             alt="carte de paiement"/><br>
+                                        <label class="checkboxPay">
+                                            <input name="paytype" type="radio" value="cheque"> Chèque
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="container  p-1">
+                                    <div class="row m-auto ">
+                                        <div class="col numberCB">
+                                            <div class="m-auto numCB">
+                                                <label for="numCB" class="numCB">
+                                                    <input class="numCB" id="numCB" type="text"  name="numCB" placeholder="N° CB *"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-auto justify-content-around">
+                                        <div class="divDateCB">
+                                            <label for="datesCB" class="dateCB">
+                                                <input class="dateCB" id="datesCB" type="month"   size="5" name="datesCB" placeholder="date *"/>
+                                            </label>
+                                        </div>
+                                        <div class="divCryptCB ">
+                                            <label for="CryptCB" class="CryptCB" >
+                                                <input class="CryptCB" id="CryptCB" type="text" size="5" name="CryptCB" pattern="[0-9]{3}" minlength="3" maxlength="3" placeholder="crypto *"/>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="addressBox row ">
+                                    <div class="textPay">
+                                        <p>Les chèques sont à envoyer à l'adresse suivante</p>
+                                    </div>
+                                    <div class="address">
+                                        <p> Association Grenn'Planet </p>
+                                        <p> 25 rue de Paris </p>
+                                        <p> 30000 Nîmes  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="validBtnForm row justify-content-center">
+                                <div class="d-flex justify-content-center">
+                                    <button  type="submit" class="btn btn-warning btn-lg">valider</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+        </main>
+        <footer class="footer row darken-40 ">
+            <div class="divTextFooter">
+                <div class="contactFooter m-auto p-1">
+                    <ul class="list-group">
+                        <li class="user">
+                            <i class="bi bi-person">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"  fill="currentColor" class="bi bi-person" viewBox="2 2 17 17">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </i>
+                            <span class="bi-person">Marc YENAMARE - Président</span>
+                        </li>
+                        <li class="build">
+                            <i class="bi bi-building">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                                    <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                                </svg>
+                            </i>
+                            <span>Association Green's Planet</span>
+                        </li>
+                        <li class="phone">
+                            <i class="bi bi-telephone">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </i>
+                            <span>+33 06 01 02 03 04 </span>
+                        </li>
+                        <li class="contact">
+                            <i class="bi bi-envelope">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                            </i>
+                            <span >
+                              <a class="text-dark" itemprop="email" href="mailto:contact@greens-planet.com">contact@greens-planet.com</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="divImgFooter ">
+                <div class="imgFooter" >
+                    <a href="index.html"><img src="photo/earth.jpg" alt="notre planète" class="imgLogoFooter img-fluid img-thumbnail "></a>
+                </div>
+            </div>
+            <div class="copyRight">
+                <p class="textLogoFooter">Green's Planet - Copyright 2021</p>
+            </div>
+        </footer>
+        <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    </body>
+</html>
