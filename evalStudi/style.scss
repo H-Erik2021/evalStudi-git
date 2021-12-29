@@ -1,0 +1,590 @@
+@font-face{
+  font-family: 'Kurale', serif;
+  src : url('https://fonts.googleapis.com/css2?family=Kurale&family=Playfair+Display:wght@500&display=swap');
+  src: local(evalStudi/Kurale);
+  src: local(evalStudi/Playfair_Display);
+  }
+
+/* position menu cacher navbar */
+
+@mixin position-menu(){
+    .linkNav{
+      text-align: end;
+      width:90%;
+      margin:auto;
+  }
+}
+
+/* color theme */
+
+$color: rgba(8, 233, 173, 0.58);
+@for $i from 20 through 100 {
+  @if $i % 10 == 0 {
+    $percentage: $i*1%;
+    .darken-#{$i} {
+      background-color: darken($color, $percentage);
+    }
+    .mix-white-#{$i} {
+      background-color: mix(white, $color, $percentage);
+    }
+  }
+}
+
+$couleur: rgba(55, 170, 171, 0.72);
+@for $i from 20 through 100 {
+  @if $i % 10 == 0 {
+    $percentage: $i*1%;
+    .darkens-#{$i} {
+      background-color: darken($couleur, $percentage);
+    }
+    .mix-whites-#{$i} {
+      background-color: mix(white, $couleur, $percentage);
+    }
+  }
+}
+
+/* image site */
+
+.imgLogo{
+  width:70%;
+  border-radius: 100px;
+}
+.imgAction,.imgArticle1, .imgArticle2{
+  border-radius:15px
+}
+.imgLinkExternal{
+  height:3em;
+  width:6em;
+  padding-right: 1.5em;
+}
+
+.imgLinkExternal::after{
+  height:10%;
+  width: 30%;
+  padding-right: 1.5em;
+}
+
+
+html body {
+  margin:0;
+  height:auto;
+  font-family: 'Kurale', serif;
+  font-size:19px;
+  background-color: $color;
+}
+
+/* page accueil */
+header{
+  margin:1em;
+}
+
+.linkTextHeader{
+  color : white;
+}
+.linkTextHeader:hover{
+  color: #f0f01d;
+}
+
+.sectionP1{
+  margin:0;
+  padding:0.5em;
+}
+
+.asideP1, {
+  margin:0;
+  border: 1px solid black;
+  padding: 0.5em;
+  background-color: $color;
+}
+.divArticle{
+  margin:0;
+  padding: 0.5em;
+}
+
+.article1, .article2{
+  margin:auto;
+  box-shadow: 10px 16px 4px #034b52;
+  background-color:$couleur;
+}
+.divSpace{
+  width:100%;
+  height: 2em;
+}
+
+h1{
+  text-align: center;
+}
+
+.h3LinkExternal{
+  text-decoration: underline;
+  font-size: 1.2em;
+  color: gray;
+  text-align:center;
+}
+
+.boxLinkExternal{
+  margin:auto;
+  width:5em;
+}
+
+/* media- query page accueil */
+@media screen and (min-width: 576px){
+   @include position-menu;
+  .img1{
+    width:17%;
+    padding:0;
+  }
+  .textLogo{
+    font-size:1.75em;
+  }
+  .mainP2{
+    width: 80%;
+    height:500px;
+  }
+  .sectionP2{
+    width: 100%;
+  }
+  .divTableP2{
+    width:80%;
+    margin:auto;
+  }
+}
+
+@media screen and (min-width:767.97px){
+  .navMenu{
+    align-items: center;
+    justify-content:space-around;
+  }
+  .textLogo{
+    font-size:2.5em;
+  }
+  .asideP1{
+    width:24%;
+  }
+  .divArticle{
+    width:74%;
+  }
+  .mainP2{
+    width: 80%;
+    padding:1.5em;
+  }
+  .table{
+    width:100%;
+    font-size:70%;
+  }
+
+  .divTableP2{
+    width:100%;
+  }
+}
+
+ @media screen and (max-width:767.98px){
+  .navMenu{
+    align-items: center;
+    justify-content:space-around;
+  }
+  .asideP1{
+    width:100%;
+  }
+   .mainP2{
+     width: 100%;
+     height:500px;
+   }
+
+   .divTableP2{
+     width:100%;
+     margin:0;
+   }
+
+   .table {
+     font-size:60%;
+   }
+
+   .textTableP2{
+     font-size:1rem;
+   }
+}
+
+
+ @media screen and (max-width: 576px) {
+   .asideP1 {
+     width: 100%;
+   }
+   .divArticle {
+     width: 100%;
+   }
+   .textLogo {
+     font-size: 1.25em;
+   }
+   .imgFooter {
+     display: none;
+   }
+   .contactFooter {
+     width: 100%
+   }
+   .mainP2{
+     width:100%;
+     padding:0;
+     margin:0;
+   }
+ }
+
+ @media (max-width:576px) and (orientation: portrait) {
+    .imgLogo{
+     display:none;
+   }
+  .navMenu{
+    align-items: center;
+    justify-content :end;
+    width:100%;
+    margin:auto;
+  }
+   @include position-menu();
+ }
+
+/* page Actions */
+
+
+.mainP2{
+  background-image :url("photo/pollution2.jpg");
+  height:auto;
+  margin-bottom: 5%;
+}
+
+.sectionP2{
+
+}
+.table{
+  background-color: rgba(128, 128, 128, 0.56);
+}
+
+.theadP2, .tbodyP2{
+  font-size: 1.5em;
+  color:white;
+  text-align: center;
+}
+
+.textTableP2{
+  color: #04f77e;
+}
+
+.inscriptionActions{
+  width:100%
+}
+
+/* page faireUnDon formulaire */
+
+@media screen and (max-width: 396px){
+  .divForm{
+    margin:0;
+    padding:0;
+  }
+  .imgFooter{
+    display:none;
+  }
+  .contactFooter{
+    width:100%
+  }
+}
+
+@media screen and (min-width: 768px){
+  .box{
+    width: 32%;
+  }
+  .divForm{
+    margin:0;
+    padding:3em;
+  }
+  .imgFooter{
+    width:65%
+  }
+  .contactFooter{
+    width:60%
+  }
+}
+
+@media screen and (min-width: 992px){
+  .box{
+    width: 29%;
+    margin:0.25em;
+  }
+  .imgFooter{
+    width:53%
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .box{
+    width: 28%;
+    margin:0.25em;
+  }
+  .imgFooter{
+    width:45%
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .box{
+    width: 26%;
+    margin:0.25em;
+  }
+  .imgFooter{
+    width:43%
+  }
+  .contactFooter{
+    width:40%
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .box{
+    width: 28%;
+    margin:0.25em;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .box{
+    width: 26%;
+    margin:0.25em;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .box{
+    width:24%;
+    margin:0.25em;
+  }
+}
+
+@media screen and (min-width: 1700px){
+  .box{
+    width:24%;
+    margin:0.25em;
+  }
+  .imgFooter{
+    width:35%
+  }
+  .contactFooter{
+    width:40%
+  }
+}
+
+@media screen and (min-width: 1900px){
+  .box{
+    width: 25% ;
+    justify-items: center;
+  }
+}
+
+.mainP3{
+  margin:auto;
+  width:100%;
+}
+
+form{
+  padding:0;
+  margin:0;
+}
+
+.divForm{
+  background-color: $color;
+  margin:0;
+  padding:1em;
+}
+
+.box{
+  border:1px solid black;
+  padding: 0;
+  box-shadow: 25px 16px 4px rgba(57, 71, 71, 0.49);
+}
+
+.titleBox{
+  font-size:1.8rem;
+}
+
+.boxDon{
+  margin-left:0;
+  margin-right: 0;
+  padding:0;
+  height:88%;
+  align-items: center;
+}
+.btnDon:focus{
+  background-color: rgba(34, 139, 34, 0.64);
+}
+
+#payFree{
+  width:90%;
+}
+#payFree:focus{
+  background-color: rgba(34, 139, 34, 0.76);
+  color:black;
+}
+
+.boxValeurDon{
+  margin-top:10%;
+  margin-left:0;
+  margin-right: 0;
+  justify-content: space-around;
+}
+
+.boxDonText{
+  margin-top:10%;
+  margin-left:0;
+  margin-right: 0;
+  padding: 0.65em;
+}
+
+.boxDonText >p{
+  text-align:center;
+  margin:0;
+}
+
+.formBox{
+  margin-top:10%
+}
+
+.champsBoxForm{
+  margin-left:auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+#mail{
+  margin:0;
+  padding: 1em;
+}
+
+#civility{
+  height:2.3em;
+}
+
+#mail, #civil, #lastNames, #firstNames, #addresses, #citys, #phone{
+  margin-left:10%;
+  width: 80%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.champsForm{
+  width: 100%;
+}
+
+#textInfo{
+  font-size: 0.65em;
+}
+
+.cbs, .paypal, .cheq{
+  width:50%;
+  margin:auto;
+}
+
+.checkboxPay::after{
+  text-align:center;
+}
+
+.boxPaiement{
+  justify-content: space-around;
+  margin:auto;
+}
+
+.imgPaiement{
+  height:50%;
+  width:50%;
+  margin-left:10%;
+}
+.checkboxPay{
+  margin-left:10%;
+}
+
+.numberCB{
+  margin:auto;
+}
+
+.numCB{
+  width:100%;
+  padding:0.15em;
+}
+
+.divDateCB, .divCryptCB{
+  width:50%;
+}
+
+.dateCB, .CryptCB{
+  width:100%;
+  margin:auto;
+  padding:0.25em;
+}
+
+.addressBox{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.textPay{
+  font-size:0.65em;
+  text-align: center;
+}
+.address{
+  text-align: center;
+}
+
+.validBtnForm{
+  padding: 1em;
+  margin-top: 1em ;
+}
+/* footer */
+
+footer{
+
+}
+
+.footer{
+  position:static;
+  bottom:0;
+  width:100%;
+  margin:0;
+  justify-content: space-around;
+}
+
+.divTextFooter{
+  padding:0.5em;
+  width:50%;
+  text-align: center;
+  color:white;
+}
+
+.divImgFooter{
+  padding:0.5em;
+  width:20%;
+  }
+
+.imgFooter{
+
+  height: auto;
+  margin: auto;
+}
+
+.imgLogoFooter{
+  width:100%;
+  border-radius: 100%;
+}
+.list-group{
+  font-size:0.9rem;
+  align-items:start;
+}
+
+.user, .build, .phone, .contact{
+  list-style-type: none;
+}
+.copyRight{
+  padding:0.5em;
+  width:100%;
+  text-align: center;
+  color:white;
+}
+.textLogoFooter{
+  font-size:1.25em;
+}
+
